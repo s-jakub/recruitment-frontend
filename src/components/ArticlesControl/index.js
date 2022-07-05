@@ -18,13 +18,17 @@ const ArticlesControl = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    let article = allArticles.find((value) => {
-      return value.id === Number(articleId);
-    });
+    let article =
+      allArticles &&
+      allArticles.find((value) => {
+        return value.id === Number(articleId);
+      });
 
-    let index = allArticles.findIndex((value) => {
-      return value.id === Number(articleId);
-    });
+    let index =
+      allArticles &&
+      allArticles.findIndex((value) => {
+        return value.id === Number(articleId);
+      });
 
     setArticleIdx(index);
     article && setArticleText(article.text);
@@ -71,13 +75,14 @@ const ArticlesControl = () => {
           value={delArticle}
           onChange={(e) => setDelArticle(e.target.value)}
         >
-          {allArticles.map((value) => {
-            return (
-              <option key={value.id} value={value.id}>
-                {value.text}
-              </option>
-            );
-          })}
+          {allArticles &&
+            allArticles.map((value) => {
+              return (
+                <option key={value.id} value={value.id}>
+                  {value.text}
+                </option>
+              );
+            })}
         </select>
         <button className="btn" type="submit">
           Usuń
@@ -92,13 +97,14 @@ const ArticlesControl = () => {
           value={articleId}
           onChange={(e) => setArticleId(e.target.value)}
         >
-          {allArticles.map((value) => {
-            return (
-              <option key={value.id} value={value.id}>
-                {value.id}
-              </option>
-            );
-          })}
+          {allArticles &&
+            allArticles.map((value) => {
+              return (
+                <option key={value.id} value={value.id}>
+                  {value.id}
+                </option>
+              );
+            })}
         </select>
         <textarea
           value={articleText}
