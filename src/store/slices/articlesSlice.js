@@ -3,7 +3,11 @@ import articles from "../../articles.json";
 
 const getArticlesFromLocalStorage = localStorage.getItem("articles")
   ? JSON.parse(localStorage.getItem("articles"))
-  : localStorage.setItem("articles", JSON.stringify(articles.articles));
+  : articles.articles;
+
+if (!localStorage.getItem("articles")) {
+  localStorage.setItem("articles", JSON.stringify(articles.articles));
+}
 
 const initialState = {
   allArticles: getArticlesFromLocalStorage,
