@@ -1,0 +1,21 @@
+@import '../../styles/variables';
+
+.btn {
+    display: block;
+    background-color: inherit;
+    color: $fontColor;
+    border: 1px solid $fontColor;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: .7rem;
+    border-radius: .2rem;
+    max-width: 180px;
+    width: 100%;
+}
+
+.btn:hover {
+    background: linear-gradient(90deg, rgba(231,131,1,1) 0%, rgba(237,160,60,1) 100%);
+    color: #fff;
+    border-color: #E2C995;
+}

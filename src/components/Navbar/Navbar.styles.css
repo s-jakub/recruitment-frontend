@@ -1,0 +1,35 @@
+.header {
+  position: fixed;
+  background-color: #0B0C10;
+  width: 100%;
+  height: 105px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 2rem;
+  z-index: 2;
+}
+.header__logo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #2A2D36;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.header__logo:hover {
+  cursor: pointer;
+  background-color: #E78301;
+  transition: 0.5s;
+}
+.header__text {
+  text-align: right;
+}
+
+@media screen and (min-width: 960px) {
+  .header__text {
+    font-size: 1.8rem;
+  }
+}/*# sourceMappingURL=Navbar.styles.css.map */

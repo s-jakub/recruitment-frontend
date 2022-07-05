@@ -1,0 +1,130 @@
+@import '../../styles/variables';
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 2rem;
+
+    .title {
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding-bottom: 2rem;
+    }
+
+    .one, .two, .three {
+        flex-grow: 1;
+        padding: 1rem 0;
+    }
+    
+    .one {
+        width: 50%;
+
+        &__radio-container {
+            color: $fontColor;
+
+            &__radio-btn {
+                padding: .5rem 0;
+                display: flex;
+                align-items: center;
+                
+                input[type="radio"] {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    appearance: none;
+                    color: #fff;
+                    width: 25px;
+                    height: 25px;
+                    border: .25em solid #fff;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    
+                }
+
+                input[type="radio"]::before {
+                    content: "";
+                    width: .8em;
+                    height: .8em;
+                    border-radius: 50%;
+                    background-color: #fff;
+                    transform: scale(0);                
+                }
+
+                input[type="radio"]:checked:before {
+                    transform: scale(1);
+                }
+
+                input:checked + label {
+                    color: #fff;
+                }
+
+                label {
+                    padding-left: .5rem;
+                    cursor: pointer;
+                }
+
+                label:focus-within {
+                    color: #fff;
+                }
+            }
+        }
+        
+    }
+
+    .two {
+        width: 50%;
+        text-align: right;
+        
+        .btn-container {
+            min-height: 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: space-around;
+            
+        }
+    }
+
+    .three {
+        width: 100%;
+
+        .text {
+            color: $fontColor;
+            text-align: center;
+
+            article {
+                padding: .5rem 0;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 960px) {
+    
+    .wrapper {
+        justify-content: center;
+
+        .one, .two, .three {
+            width: 33.33%;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .two {
+
+            .btn-container {
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+    }
+}

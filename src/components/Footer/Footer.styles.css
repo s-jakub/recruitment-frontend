@@ -1,0 +1,143 @@
+footer {
+  width: 100%;
+  height: 140px;
+  background-color: #0B0C10;
+  padding: 2rem;
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+footer .square {
+  height: 95px;
+  width: 95px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  line-height: 1.5rem;
+  font-size: 1.2rem;
+  padding-left: 1rem;
+  opacity: 0.2;
+}
+footer .square::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid;
+  border-color: #ABACB0;
+  transition: border-color 0.2s, transform 1s;
+}
+footer .square:hover::before {
+  border-color: #E78301;
+  cursor: pointer;
+  transform: rotate(360deg);
+}
+footer .company-name {
+  font-size: 2rem;
+  color: #ABACB0;
+  opacity: 0.1;
+  position: relative;
+}
+footer .company-name::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 2px;
+  background-color: #ABACB0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+footer .company-name::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 2px;
+  background-color: #ABACB0;
+  top: 50%;
+  right: 100%;
+  transform: translateY(-50%);
+}
+footer .dropdown {
+  max-width: 250px;
+  width: 100%;
+  height: 48px;
+  margin-left: 2rem;
+  text-align: center;
+  border: 1px solid #ABACB0;
+  border-radius: 0.2rem;
+  position: relative;
+}
+footer .dropdown__menu-content {
+  z-index: -1;
+  position: absolute;
+  display: block;
+  background-color: #fff;
+  color: #000;
+  bottom: -60%;
+  padding: 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  max-width: 250px;
+  width: 100%;
+  border-top-left-radius: 0.2rem;
+  border-top-right-radius: 0.2rem;
+  box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.2);
+  transition: z-index 0s, bottom 2s;
+  transition-delay: 0s, 0s;
+  transition-property: z-index, bottom;
+}
+footer .dropdown__dropdown-menu {
+  height: 100%;
+  font-weight: bold;
+  color: #ABACB0;
+}
+footer .dropdown__dropdown-menu:hover {
+  color: #fff;
+}
+footer .dropdown ul {
+  list-style: none;
+  text-align: left;
+}
+footer .dropdown li {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+footer .dropdown li .arrow {
+  transform: rotate(90deg) scale(2);
+}
+footer .dropdown li span {
+  padding-left: 0.5rem;
+}
+footer .dropdown li:first-child {
+  padding-bottom: 0.5rem;
+}
+footer .dropdown li:hover {
+  color: #E78301;
+}
+footer .dropdown input {
+  display: none;
+}
+footer .dropdown label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+footer .dropdown label span {
+  width: 30px;
+  transform: scale(2) translateY(0.1rem);
+}
+footer .dropdown input:checked ~ label > span {
+  transform: rotate(180deg) scale(2) translateY(0.1rem);
+}
+footer .dropdown input:checked ~ .dropdown__menu-content {
+  bottom: 204%;
+  z-index: 0;
+  transition: z-index 2s, bottom 2s;
+  transition-delay: 2s, 0s;
+  transition-property: z-index, bottom;
+}/*# sourceMappingURL=Footer.styles.css.map */

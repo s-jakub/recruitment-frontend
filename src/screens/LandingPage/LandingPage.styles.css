@@ -1,0 +1,105 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 2rem;
+}
+.wrapper .title {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-bottom: 2rem;
+}
+.wrapper .one, .wrapper .two, .wrapper .three {
+  flex-grow: 1;
+  padding: 1rem 0;
+}
+.wrapper .one {
+  width: 50%;
+}
+.wrapper .one__radio-container {
+  color: #ABACB0;
+}
+.wrapper .one__radio-container__radio-btn {
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+}
+.wrapper .one__radio-container__radio-btn input[type=radio] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  color: #fff;
+  width: 25px;
+  height: 25px;
+  border: 0.25em solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.wrapper .one__radio-container__radio-btn input[type=radio]::before {
+  content: "";
+  width: 0.8em;
+  height: 0.8em;
+  border-radius: 50%;
+  background-color: #fff;
+  transform: scale(0);
+}
+.wrapper .one__radio-container__radio-btn input[type=radio]:checked:before {
+  transform: scale(1);
+}
+.wrapper .one__radio-container__radio-btn input:checked + label {
+  color: #fff;
+}
+.wrapper .one__radio-container__radio-btn label {
+  padding-left: 0.5rem;
+  cursor: pointer;
+}
+.wrapper .one__radio-container__radio-btn label:focus-within {
+  color: #fff;
+}
+.wrapper .two {
+  width: 50%;
+  text-align: right;
+}
+.wrapper .two .btn-container {
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+.wrapper .three {
+  width: 100%;
+}
+.wrapper .three .text {
+  color: #ABACB0;
+  text-align: center;
+}
+.wrapper .three .text article {
+  padding: 0.5rem 0;
+}
+
+@media screen and (min-width: 960px) {
+  .wrapper {
+    justify-content: center;
+  }
+  .wrapper .one, .wrapper .two, .wrapper .three {
+    width: 33.33%;
+    text-align: center;
+    padding: 1rem;
+  }
+  .wrapper .two .btn-container {
+    flex-direction: row;
+    align-items: center;
+  }
+}/*# sourceMappingURL=LandingPage.styles.css.map */

@@ -1,0 +1,42 @@
+@import '../../styles/variables';
+
+.header {
+    position: fixed;
+    background-color: $secondary;
+    width: 100%;
+    height: 105px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 2rem;
+    z-index: 2;
+
+    &__logo {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background-color: $primary;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    &__logo:hover {
+        cursor: pointer;
+        background-color: $orange;
+        transition: .5s;
+    }
+
+    &__text {
+        text-align: right;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .header {
+        &__text {
+            font-size: 1.8rem;
+        }
+    }
+}
